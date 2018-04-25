@@ -3,7 +3,7 @@ import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from lxml import html
-import numpy as np
+from carnalyser.items import Car
 
 class WebMotorsSpider(CrawlSpider):
     name = "wmspider"
@@ -17,6 +17,9 @@ class WebMotorsSpider(CrawlSpider):
 
 
     def parse(self, response):
+        
+        doc = Car()
+        
         for car in response.xpath('//a[contains(@itemtype, "http://schema.org/Offer")]'):
 
             ## Extracting anf formating the link
@@ -66,6 +69,7 @@ class WebMotorsSpider(CrawlSpider):
             
             ## Among the values
             yield {
+                
                 'brand': brand,
                 'model': model,
                 'price': price,
@@ -78,4 +82,5 @@ class WebMotorsSpider(CrawlSpider):
                 'km': km,
                 'cambio': gear_shift,
                 'desc': description,
+                # See https://stackoverflow.com/questions/43922562/scrapy-how-to-use-items-in-spider-and-how-to-send-items-to-pipelines
            }
