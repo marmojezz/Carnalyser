@@ -8,7 +8,7 @@
 import scrapy
 
 
-class Ads(scrapy.Item):
+class Car(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     brand = scrapy.Field()
