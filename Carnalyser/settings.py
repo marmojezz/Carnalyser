@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'Carnalyser.spiders'
 #USER_AGENT = 'Carnalyser (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False #https://stackoverflow.com/questions/37274835/getting-forbidden-by-robots-txt-scrapy
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
