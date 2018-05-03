@@ -7,7 +7,6 @@
 
 import scrapy
 
-
 class Car(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -23,5 +22,3 @@ class Car(scrapy.Item):
     km = scrapy.Field()
     cambio = scrapy.Field()
     desc = scrapy.Field()
-    
-    pass

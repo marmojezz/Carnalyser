@@ -13,4 +13,5 @@ Carnalyser goes beyond a simple research result delivering. It gives real insigh
 
 ## How to run spiders
 1. Open prompt and navigate to '.\Carnalyser\spiders' folder
-2. Run 'scrapy runspider nameofthespider.py'
+2. Run 'scrapy runspider nameofthespider.py' or
+3. Run 'scrapy crawl SpiderName -o SpiderName.json' to get information into a json file
